@@ -27,3 +27,19 @@ These queries were used to:
 
 Each query was written in standard SQL and run on the dataset from [Kaggle: OCD Patient Dataset – Demographics & Clinical Data](https://www.kaggle.com/datasets/ohinhaque/ocd-patient-dataset-demographics-and-clinical-data/versions/1?resource=download). The resulting tables were then imported into Tableau for visualization.
 
+## Tableau Dashboard
+[View the Interactive Dashboard on Tableau Public]([https://public.tableau.com/views/your-dashboard-link](https://public.tableau.com/views/OCDPatientDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
+
+This dashboard was created using SQL-transformed data and visualized in Tableau. It presents clinical and demographic patterns in OCD diagnoses to help understand trends and symptom distributions.
+
+## Summary
+
+This project showcases my ability to work with clinical and demographic data, apply SQL to generate insights, and communicate findings through visual storytelling in Tableau. The OCD Patient Dashboard offers a snapshot of patterns in obsessive-compulsive disorder diagnoses based on real-world data.
+
+## Skills Demonstrated
+
+- Data cleaning and transformation using SQL
+- Aggregating and analyzing clinical data
+- Designing clear, user-friendly dashboards in Tableau
+- Interpreting health data and highlighting key insights
+- Structuring and documenting a technical project for portfolio and hiring purposes
