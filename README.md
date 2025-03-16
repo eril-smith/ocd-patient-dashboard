@@ -13,3 +13,17 @@ This repository contains the **OCD Patient Dashboard**, an interactive Tableau d
 
 ## Dataset
 - Source: [Kaggle - OCD Patient Dataset](https://www.kaggle.com/datasets/ohinhaque/ocd-patient-dataset-demographics-and-clinical-data/versions/1?resource=download)
+
+- ## SQL Queries
+
+The SQL queries used to create the underlying dataset for the OCD Patient Dashboard are included in [`ocd_dashboard_queries.sql`](./ocd_dashboard_queries.sql).
+
+These queries were used to:
+1. Calculate the count and percentage of male vs. female OCD patients and their average Y-BOCS obsession scores
+2. Summarize patient counts and average obsession scores by ethnicity
+3. Show month-over-month (MoM) trends in OCD diagnoses
+4. Identify the most common obsession types and their associated average scores
+5. Identify the most common compulsion types and their associated average scores
+
+Each query was written in standard SQL and run on the dataset from [Kaggle: OCD Patient Dataset – Demographics & Clinical Data](https://www.kaggle.com/datasets/ohinhaque/ocd-patient-dataset-demographics-and-clinical-data/versions/1?resource=download). The resulting tables were then imported into Tableau for visualization.
+
