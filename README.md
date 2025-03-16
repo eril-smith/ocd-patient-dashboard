@@ -33,7 +33,7 @@ Each query was written in standard SQL and run on the dataset from [Kaggle: OCD 
 This dashboard was created using SQL-transformed data and visualized in Tableau. It presents clinical and demographic patterns in OCD diagnoses to help understand trends and symptom distributions.
 
 See a preview of the dashboard below:
-![Dashboard Screenshot](./assets/OCD_Patient_Dashboard_Preview.png)
+![Dashboard Screenshot](./OCD_Patient_Dashboard_Preview.png)
 
 ## Summary
 
