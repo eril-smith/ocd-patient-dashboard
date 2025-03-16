@@ -14,7 +14,7 @@ This repository contains the **OCD Patient Dashboard**, an interactive Tableau d
 ## Dataset
 - Source: [Kaggle - OCD Patient Dataset](https://www.kaggle.com/datasets/ohinhaque/ocd-patient-dataset-demographics-and-clinical-data/versions/1?resource=download)
 
-- ## SQL Queries
+## SQL Queries
 
 The SQL queries used to create the underlying dataset for the OCD Patient Dashboard are included in [`ocd_dashboard_queries.sql`](./ocd_dashboard_queries.sql).
 
