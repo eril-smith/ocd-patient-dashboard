@@ -3,7 +3,12 @@
 -- Source: OCD Patient Dataset from Kaggle
 -- Author: Eril Smith
 
--- 1. Count & Percent of Female vs Male OCD Patients & Average Obsession score by Gender
+------------------------------------------------------------
+-- 1. Gender Distribution and Average Obsession Score
+-- Calculates the total number of male and female patients,
+-- the percentage of each group, and the average Y-BOCS 
+-- Obsession score by gender
+------------------------------------------------------------
 
 WITH gender_count_data AS 
 (
@@ -17,16 +22,22 @@ SELECT Gender
  
 SELECT sum(CASE WHEN Gender = 'Female' THEN patient_count ELSE 0 END) AS count_female
   ,sum(CASE WHEN Gender = 'Male' THEN patient_count ELSE 0 END) AS count_male
+
+-- Calculate % of female and male patients
   ,round(sum(CASE WHEN Gender = 'Female' THEN patient_count ELSE 0 END)/
  (sum(CASE WHEN Gender = 'Female' THEN patient_count ELSE 0 END)+sum(CASE WHEN Gender = 'Male' THEN patient_count ELSE 0 END)) *100,2)
  AS pct_female
+  
   ,round(sum(CASE WHEN Gender = 'Male' THEN patient_count ELSE 0 END)/
  (sum(CASE WHEN Gender = 'Female' THEN patient_count ELSE 0 END)+sum(CASE WHEN Gender = 'Male' THEN patient_count ELSE 0 END)) *100,2)
  AS pct_male
 FROM gender_count_data
  ;
 
--- 2. Count of Patients by Ethnicity and Respective Average Obsession Score
+
+------------------------------------------------------------
+-- 2. Patient Count and Average Obsession Score by Ethnicity
+------------------------------------------------------------
 
 SELECT Ethnicity
   ,COUNT(`Patient ID`) AS patient_count
@@ -37,8 +48,13 @@ FROM OCD_Patient_Dataset.ocd_health_data
 ;
 
 
-3. Number of people diagnosed with OCD MoM (month over month)
+------------------------------------------------------------
+-- 3. Month-Over-Month OCD Diagnoses
+-- Formats OCD diagnosis dates to the first of each month
+-- and counts how many patients were diagnosed each month
+------------------------------------------------------------
 
+-- Ensure OCD Diagnosis Date is in DATE format
 ALTER TABLE OCD_Patient_Dataset.ocd_health_data
 MODIFY `OCD Diagnosis Date` date
 ;
@@ -50,7 +66,9 @@ FROM OCD_Patient_Dataset.ocd_health_data
   ORDER BY MONTH 
 ;
 
--- 4. What is the most common Obsession Type (Count) & it's respective Average Obsession Score
+------------------------------------------------------------
+-- 4. Most Common Obsession Types & Avg Scores
+------------------------------------------------------------
 
 SELECT `Obsession Type`
   ,COUNT(`Patient ID`) AS patient_count
@@ -60,8 +78,9 @@ FROM OCD_Patient_Dataset.ocd_health_data
   ORDER BY patient_count
 ;
 
-
--- 5. What is the most common Compulsion type (Count) & it's respective Average Obsession Score
+------------------------------------------------------------
+-- 5. Most Common Compulsion Types & Avg Scores
+------------------------------------------------------------
 
 SELECT `Compulsion Type`
   ,COUNT(`Patient ID`) AS patient_count
